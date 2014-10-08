@@ -5,7 +5,7 @@
 	<groupId>org.entando.entando</groupId>
 	<artifactId>portalexample</artifactId>
 	<packaging>war</packaging>
-	<version>4.1.1-SNAPSHOT</version>
+	<version>4.1.2-SNAPSHOT</version>
 	<name>portalexample</name>
 	<description>A Portal Example for Entando</description>
 	<url>http://www.entando.com/</url>
@@ -121,10 +121,10 @@
 		
 		<skipDerby>true</skipDerby>
 		<skipStandalone>true</skipStandalone>
-		<entando.version>4.1.1-SNAPSHOT</entando.version>
+		<entando.version>4.1.2-SNAPSHOT</entando.version>
 		<spring.version>4.0.0.RELEASE</spring.version>
 		<struts2.version>2.3.16.3</struts2.version>
-		<cxf.version>2.7.11</cxf.version>
+		<cxf.version>3.0.0-milestone2</cxf.version>
 	</properties>
 	<build>
 		<finalName>portalexample</finalName>
@@ -211,7 +211,11 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.entando.entando</groupId>
-									<artifactId>entando-core-webapp</artifactId>
+									<artifactId>entando-admin-console</artifactId>
+									<!--
+									<groupId>org.entando.entando</groupId>
+									<artifactId>entando-portal-ui</artifactId>
+									-->
 									<type>war</type>
 									<outputDirectory>src/main/webapp</outputDirectory>
 									<overWrite>false</overWrite>
@@ -478,11 +482,13 @@
 						<artifactId>postgresql</artifactId>
 						<version>9.1-901.jdbc4</version>
 					</dependency>
+					<!--
 					<dependency>
 						<groupId>mysql</groupId>
 						<artifactId>mysql-connector-java</artifactId>
 						<version>5.1.18</version>
 					</dependency>
+					-->
 					<dependency>
 						<groupId>org.apache.derby</groupId>
 						<artifactId>derby</artifactId>
@@ -726,26 +732,64 @@
 			<version>${entando.version}</version>
 			<type>war</type>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.entando.entando</groupId>
-			<artifactId>entando-core-webapp</artifactId>
-			<version>${entando.version}</version>
-			<type>war</type>
-		</dependency>
-		<dependency>
-			<groupId>org.entando.entando</groupId>
-			<artifactId>entando-core-engine</artifactId>
+			<artifactId>entando-engine</artifactId>
 			<version>${entando.version}</version>
 			<type>jar</type>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
-			<artifactId>entando-core-engine</artifactId>
+			<artifactId>entando-engine</artifactId>
 			<version>${entando.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.entando.entando</groupId>
+			<artifactId>entando-admin-console</artifactId>
+			<version>${entando.version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.entando.entando</groupId>
+			<artifactId>entando-admin-console</artifactId>
+			<version>${entando.version}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>org.entando.entando</groupId>
+			<artifactId>entando-admin-console</artifactId>
+			<version>${entando.version}</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.entando.entando</groupId>
+			<artifactId>entando-portal-ui</artifactId>
+			<version>${entando.version}</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.entando.entando</groupId>
+			<artifactId>entando-portal-ui</artifactId>
+			<version>${entando.version}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>org.entando.entando</groupId>
+			<artifactId>entando-portal-ui</artifactId>
+			<version>${entando.version}</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+		
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>

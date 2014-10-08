@@ -1,3 +1,7 @@
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_CONTENT_PREVIEW', 'en', 'Content Preview');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_CONTENT_PREVIEW', 'it', 'Anteprima contenuto');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_BACK_TO_EDIT_CONTENT', 'en', 'Back to content editing');
+INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('jacms_BACK_TO_EDIT_CONTENT', 'it', 'Ritorna in redazione contenuto');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('userprofile_PFL_list', 'en', 'list');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('userprofile_PFL_boolean', 'en', 'Boolean');
 INSERT INTO localstrings (keycode, langcode, stringvalue) VALUES ('userprofile_PFL_cbox', 'en', 'Checkbox');
