@@ -29,5 +29,11 @@
 		maxActive="8" maxIdle="4" 
 		username="${profile.database.username}" password="${profile.database.password}" 
 		url="${profile.database.url.servdb}" />
-	
+	<!--
+	<Resource name="jdbc/servDataSourceTest" auth="Container" 
+		type="javax.sql.DataSource" driverClassName="org.postgresql.Driver" 
+		maxActive="8" maxIdle="4" 
+		username="${profile.database.username}" password="${profile.database.password}" 
+		url="jdbc:postgresql://localhost:5432/${profile.application.name}ServTest" />
+	-->
 </Context>

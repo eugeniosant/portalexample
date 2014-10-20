@@ -10,7 +10,8 @@
 		<property name="keyGeneratorManager" ref="KeyGeneratorManager" />
 		<property name="cardDAO" >
 			<bean class="org.entando.entando.portalexample.aps.system.services.card.CardDAO">
-				<property name="dataSource" ref="servDataSource" />
+				<!-- <property name="dataSource" ref="servDataSource" /> -->
+				<property name="dataSourceName"><value>servDataSource</value></property>
 			</bean>
 		</property>
 	</bean>

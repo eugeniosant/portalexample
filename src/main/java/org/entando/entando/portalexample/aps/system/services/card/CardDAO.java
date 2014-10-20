@@ -39,6 +39,9 @@ public class CardDAO extends AbstractSearcherDAO implements ICardDAO {
 	
 	@Override
 	public List<Card> searchCards(String holder) {
+		
+		System.out.println("*********** SEARCH CARD ***********");
+		
 		List<Card> cards = new ArrayList<Card>();
 		FieldSearchFilter filter = new FieldSearchFilter("holder");
 		if (null != holder && holder.trim().length() > 0) {
